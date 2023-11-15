@@ -1,4 +1,4 @@
-class HouseController < ApplicationController
+class HousesController < ApplicationController
   #before any actions authenticate user
   before_action :authenticate_user!
   before_action :set_house, only: [:show, :update]
