@@ -7,9 +7,9 @@ class HousesController < ApplicationController
     category = params[:category]
     search = params[:search]
 
-    @houses = House.where
-            ("category LIKE '%#{category}%' AND title LIKE '%#{search}%'")
-            .order(created_at: :desc)
+    @houses = House
+                .where("category LIKE '%#{category}%' AND title LIKE '%#{search}%'")
+                .order(created_at: :desc)
     render json: @houses
   end
 
